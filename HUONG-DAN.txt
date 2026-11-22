@@ -1,0 +1,17 @@
+PORTFOLIO CỦA TRẦN CÔNG VINH
+
+1. Giải nén toàn bộ tệp ZIP vào cùng một thư mục.
+2. Mở index.html bằng trình duyệt. Trang Kinh nghiệm sẽ hiển thị hai công việc là làm tại xưởng gỗ và bán bánh bao thịt nướng.
+3. Chọn Giới thiệu để xem thông tin cá nhân và Học vấn. Từ Trang chủ, nút Xem học vấn cũng dẫn thẳng tới phần này.
+
+CHỈNH NỘI DUNG
+
+• Trong VS Code, chọn File > Open Folder và mở thư mục vừa giải nén. Sau khi chỉnh sửa, nhấn Ctrl + S và tải lại trang trong trình duyệt.
+• index.html chứa hồ sơ, học vấn, kinh nghiệm, hoạt động nhóm và thông tin liên hệ. Có thể tìm đến đúng mục bằng tên hoặc tiêu đề hiển thị trên trang.
+• style.css quy định màu sắc, cỡ chữ và bố cục. Các màu chính nằm trong phần :root ở đầu tệp.
+• script.js điều khiển việc chuyển trang, menu trên điện thoại và tìm kiếm tiếng Việt có dấu hoặc không dấu.
+• Thư mục images chứa sáu ảnh cá nhân và công việc, cùng mã QR liên hệ. Một số ảnh có liên kết để bấm xem toàn bộ khung hình. Khi thay ảnh, cập nhật cả src của ảnh, href của liên kết xem ảnh và mô tả alt trong index.html.
+
+Mã QR mở thư gửi tới vinhcongtran07@gmail.com. Nếu đổi email, hãy cập nhật các liên kết mailto trong index.html và thay ảnh images/qr-lien-he.png.
+
+Nội dung và ảnh hiển thị ngay cả khi ngoại tuyến. Liên kết Facebook cần kết nối mạng. Liên kết email mở ứng dụng thư trên thiết bị.

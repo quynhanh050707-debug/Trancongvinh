@@ -1,0 +1,219 @@
+:root {
+  --background: #393939;
+  --text: #faf8f4;
+  --heading: #b0caff;
+  --nav-blue: #88aaf0;
+  --ink: #121a28;
+  --bar-height: 3.5rem;
+  --serif: "STIX Two Text", Cambria, Georgia, "Times New Roman", serif;
+  --sans: "DM Sans", "Segoe UI", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--background);
+  font: 1.125rem/1.55 var(--serif);
+}
+img { display: block; width: 100%; }
+a { color: inherit; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+button, a { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 3px solid #eebd62; outline-offset: 3px; }
+h1, h2, p { margin: 0; }
+h2 { color: var(--heading); font-size: clamp(1.5rem, 2.15vw, 1.95rem); line-height: 1.22; }
+.container { width: min(85.4%, 72rem); margin-inline: auto; }
+.skip-link { position: fixed; z-index: 10; top: -5rem; left: 1rem; padding: .5rem 1rem; color: var(--ink); background: white; }
+.skip-link:focus { top: .5rem; }
+[data-entry] { scroll-margin-top: calc(var(--bar-height) + 1.25rem); }
+
+/* Thanh điều hướng trên cùng */
+.topbar { position: sticky; z-index: 5; top: 0; color: var(--ink); background: var(--nav-blue); }
+.topbar-inner { min-height: var(--bar-height); padding-inline: clamp(.8rem, 2.15vw, 2rem); display: flex; align-items: center; }
+.brand { display: inline-flex; align-items: center; gap: .8rem; margin-right: auto; text-decoration: none; font: 500 1.23rem/1.2 var(--sans); }
+.brand-photo {
+  width: 2.45rem;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+.main-nav { display: flex; align-self: stretch; align-items: stretch; }
+.main-nav a {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: .55rem .82rem;
+  text-decoration: none;
+  font-size: 1.05rem;
+}
+.main-nav a:hover { background: rgb(255 255 255 / 16%); }
+.main-nav a[aria-current="page"]::after { content: ""; position: absolute; bottom: 0; left: .65rem; right: .65rem; height: .32rem; background: var(--ink); }
+.icon-button {
+  display: inline-grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: .2rem;
+  color: inherit;
+  background: transparent;
+}
+.icon-button:hover { background: rgb(255 255 255 / 25%); }
+.search-icon { position: relative; width: .95rem; height: .95rem; border: 2px solid currentColor; border-radius: 50%; transform: translate(-2px, -2px); }
+.search-icon::after { content: ""; position: absolute; width: .52rem; height: 2px; right: -.42rem; bottom: -.18rem; background: currentColor; transform: rotate(47deg); }
+.menu-button { display: none; }
+.menu-icon, .menu-icon::before, .menu-icon::after { width: 1.25rem; height: 2px; background: currentColor; }
+.menu-icon { position: relative; }
+.menu-icon::before, .menu-icon::after { content: ""; position: absolute; left: 0; }
+.menu-icon::before { top: -.37rem; }
+.menu-icon::after { top: .37rem; }
+
+/* Các lớp màu tạo hiệu ứng ánh đèn mờ cho ảnh bìa. */
+.banner {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: clamp(13rem, 21vw, 18.2rem);
+  display: grid;
+  place-items: center;
+  padding: 2.75rem 1rem;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 10% 108%, #8b7853 0, transparent 29%),
+    radial-gradient(ellipse at 97% 42%, #24336d 0, transparent 35%),
+    linear-gradient(112deg, #151819, #1b1820 44%, #151927 72%, #1c2540);
+}
+.banner::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: -6px;
+  filter: blur(4px);
+  background:
+    radial-gradient(circle 32px at 7% 100%, #fff5d4 0 33%, #d8b76b 49%, transparent 90%),
+    radial-gradient(circle 20px at 12% 91%, #eab463 30%, transparent 88%),
+    radial-gradient(circle 27px at 17% 98%, #64aba9 0 27%, transparent 90%),
+    radial-gradient(circle 18px at 5% 52%, #802f3e 38%, transparent 90%),
+    radial-gradient(circle 28px at 17% 5%, #9d9bbb 27%, transparent 86%),
+    radial-gradient(ellipse 65px 35px at 13% 23%, #173db5 20%, transparent 92%),
+    radial-gradient(circle 25px at 68% 26%, #9b8d52 16%, transparent 85%),
+    radial-gradient(circle 32px at 66% 83%, #475c74 25%, transparent 90%),
+    radial-gradient(ellipse 60px 38px at 91% 76%, #303a84 5%, transparent 94%);
+}
+.banner h1 {
+  color: var(--heading);
+  font-size: clamp(2rem, 3.7vw, 3.25rem);
+  line-height: 1.18;
+  text-transform: uppercase;
+  text-wrap: balance;
+  text-shadow: 0 2px 7px #0f1522;
+}
+
+/* Hai kinh nghiệm đặt cạnh nhau, bên dưới là ảnh gốc trong ca làm. */
+.experience { padding-block: 1.5rem 3.25rem; }
+.landscape-grid, .split-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.25rem, 2.2vw, 2rem);
+}
+.landscape-job { text-align: center; }
+.photo-link { display: block; }
+.landscape-job img { height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.workshop-cover { object-position: 50% 29%; }
+.group-cover { object-position: 50% 95%; }
+.landscape-job h2 { margin: .9rem 0 1.35rem; }
+.landscape-job p { padding-inline: .55rem; }
+.landscape-job p + p { margin-top: .65rem; }
+.work-album { max-width: 42rem; margin: clamp(2.8rem, 5vw, 4.5rem) auto 0; }
+.work-album h2 { text-align: center; margin-bottom: 1.3rem; }
+.album-photos { display: grid; grid-template-columns: 4fr 3fr; gap: clamp(.8rem, 2vw, 1.6rem); }
+.album-photos figure { min-width: 0; margin: 0; }
+.album-photos img { height: auto; }
+.album-photos figcaption { margin-top: .6rem; font-size: 1rem; text-align: center; }
+
+/* Những trang còn lại dùng chung thanh menu, ảnh bìa và chân trang. */
+.split-layout { padding-block: clamp(2rem, 5vw, 4.75rem); align-items: center; }
+.profile-photo, .project-photo { width: min(100%, 26rem); height: auto; margin-inline: auto; }
+.feature-copy { max-width: 30rem; padding: 1rem; }
+.feature-copy p, .reading-column p { margin-top: .85rem; }
+.profile-links { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.4rem; }
+.button-link { display: inline-block; padding: .48rem 1.15rem; border: 1px solid var(--heading); border-radius: .25rem; text-decoration: none; }
+.button-link:hover { background: var(--heading); color: var(--ink); }
+.about-layout { align-items: start; }
+.profile-details { min-width: 0; }
+.facts { margin: 1rem 0 0; }
+.facts div { display: grid; grid-template-columns: 6rem minmax(0, 1fr); gap: .7rem; border-bottom: 1px solid #646668; padding-block: .38rem; }
+.facts dt { color: #d8e5ff; }
+.facts dd { margin: 0; overflow-wrap: anywhere; }
+.education { margin-top: 2rem; }
+.education ul, .task-list { margin: .9rem 0 0; padding-left: 1.3rem; }
+.education li + li, .task-list li + li { margin-top: .5rem; }
+.reading-column { width: min(85.4%, 44rem); margin: auto; padding-block: clamp(2rem, 5vw, 4.75rem); }
+
+/* Điều hướng và liên hệ cuối trang */
+.bottom-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(.6rem, 2vw, 1.8rem);
+  padding: 1.9rem .6rem;
+  border-block: 2px solid var(--nav-blue);
+  margin-bottom: .55rem;
+}
+.bottom-nav a { min-width: 8rem; flex: 0 1 10.4rem; padding: .38rem .7rem; color: white; border: 1px solid #d4d4d4; border-radius: .28rem; text-align: center; text-decoration: none; font-size: 1rem; }
+.bottom-nav a:hover, .bottom-nav a[aria-current="page"] { color: var(--ink); background: #faf9f6; }
+.contact { background: #f0f0ee; color: var(--ink); }
+.contact-inner { display: flex; align-items: center; gap: clamp(1rem, 3vw, 2.7rem); padding-block: 1.5rem; }
+.contact-inner > div { min-width: 0; }
+.qr-link { flex: 0 0 auto; }
+.qr-link img { width: 7rem; height: 7rem; image-rendering: pixelated; }
+.contact h2 { margin-bottom: .5rem; font-size: 1.35rem; color: var(--ink); }
+.contact address { display: grid; justify-items: start; gap: .25rem; font: normal 1rem/1.5 var(--sans); overflow-wrap: anywhere; }
+.signature { margin-left: auto; font: italic bold clamp(1.6rem, 3vw, 2.55rem)/1.2 var(--serif); color: #394b6b; }
+
+/* Tìm kiếm trên các mục có sẵn trong tệp HTML */
+#search-dialog { width: min(32rem, calc(100% - 2rem)); max-height: 80vh; padding: 1.4rem; color: var(--ink); border: none; border-radius: .5rem; background: #faf9f5; box-shadow: 0 20px 70px #13182066; }
+#search-dialog::backdrop { background: rgb(13 19 30 / 65%); }
+.dialog-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+.dialog-heading h2 { color: var(--ink); font-size: 1.6rem; }
+.close-button { font: 1.9rem/1 var(--sans); }
+.close-button:hover { background: #e5eaf2; }
+#search-dialog label, .search-message { font: .92rem/1.5 var(--sans); }
+#search-input { width: 100%; padding: .6rem .8rem; margin-block: .3rem .7rem; border: 1px solid #6d7788; border-radius: .25rem; background: white; color: var(--ink); font: 1rem/1.5 var(--sans); }
+.search-message { color: #494f5b; }
+#search-results { margin: .45rem 0 0; padding: 0; list-style: none; }
+#search-results a { display: block; padding: .5rem .2rem; border-top: 1px solid #d8dce1; text-decoration: none; }
+#search-results a:hover { color: #284e87; text-decoration: underline; }
+
+@media (max-width: 52rem) {
+  .menu-button { display: inline-grid; }
+  .main-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; padding: .35rem .8rem .8rem; background: var(--nav-blue); box-shadow: 0 5px 8px #14182033; }
+  .main-nav.is-open { display: grid; }
+  .main-nav a { min-height: 2.8rem; padding-inline: .9rem; }
+  .main-nav a[aria-current="page"] { background: #adc5f3; }
+  .main-nav a[aria-current="page"]::after { top: .55rem; bottom: .55rem; left: 0; right: auto; width: .22rem; height: auto; }
+  .container, .reading-column { width: 90%; }
+}
+
+@media (max-width: 42rem) {
+  body { font-size: 1.0625rem; }
+  .brand { font-size: 1.1rem; }
+  .brand-photo { width: 2.15rem; }
+  .banner { min-height: 11.5rem; }
+  .experience { padding-block: 1.2rem 2.25rem; }
+  .landscape-grid, .split-layout { grid-template-columns: minmax(0, 1fr); gap: 2.2rem; }
+  .landscape-job h2 { margin-bottom: .8rem; }
+  .landscape-job p { padding: 0; }
+  .facts div { grid-template-columns: 4.8rem minmax(0, 1fr); }
+  .feature-copy { padding: 0; }
+  .bottom-nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 1.1rem 0; gap: .65rem; }
+  .bottom-nav a { min-width: 0; padding-block: .55rem; }
+  .contact-inner { gap: .9rem; }
+  .qr-link img { width: 4.5rem; height: 4.5rem; }
+  .signature { display: none; }
+}

@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#88aaf0">
+  <meta name="description" content="Portfolio của Trần Công Vinh, sinh viên năm 2 ngành Dược học tại Đại học Lạc Hồng. Học vấn và kinh nghiệm làm việc tại xưởng gỗ, bán bánh bao thịt nướng.">
+  <title>Kinh nghiệm | Trần Công Vinh</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#noi-dung">Đến nội dung chính</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#trang-chu">
+        <img class="brand-photo" src="images/tran-cong-vinh.jpg" width="40" height="40" alt="">
+        <span>Trần Công Vinh</span>
+      </a>
+      <button class="icon-button menu-button" id="menu-button" type="button"
+              aria-label="Mở menu" aria-expanded="false" aria-controls="main-nav">
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Điều hướng chính">
+        <a href="#trang-chu">Trang chủ</a>
+        <a href="#gioi-thieu">Giới thiệu</a>
+        <a href="#du-an">Dự án của tôi</a>
+        <a href="#kinh-nghiem" aria-current="page">Kinh nghiệm</a>
+        <a href="#triet-ly-song">Triết lý sống</a>
+      </nav>
+      <button class="icon-button" id="open-search" type="button" aria-label="Tìm kiếm"
+              aria-haspopup="dialog" aria-controls="search-dialog">
+        <span class="search-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="noi-dung" tabindex="-1">
+    <!-- Trang Kinh nghiệm hiển thị đầu tiên khi mở index.html. -->
+    <section class="page" id="kinh-nghiem" data-title="Kinh nghiệm" aria-labelledby="heading-experience">
+      <header class="banner"><h1 id="heading-experience">Kinh nghiệm công việc</h1></header>
+      <div class="container experience">
+        <div class="landscape-grid">
+          <article class="landscape-job" id="xuong-go" data-entry>
+            <a class="photo-link" href="images/vinh-tai-xuong-go.jpg" aria-label="Xem toàn bộ ảnh Vinh tại xưởng gỗ">
+              <img class="workshop-cover" src="images/vinh-tai-xuong-go.jpg" alt="Vinh đeo khẩu trang trong xưởng, phía sau là bàn làm việc và vật liệu gỗ." width="1536" height="2048">
+            </a>
+            <h2>Làm việc tại xưởng gỗ</h2>
+            <p>Trong quá trình sản xuất và hoàn thiện sản phẩm tại xưởng gỗ, tôi rèn luyện được tính kỷ luật, sự bền bỉ, khả năng chịu áp lực công việc và tinh thần trách nhiệm cao.</p>
+            <p>Tôi học cách phối hợp tốt với đồng đội, tuân thủ nghiêm túc các quy định tại nơi làm việc và nhanh chóng thích nghi với nhiệm vụ mới.</p>
+          </article>
+          <article class="landscape-job" id="ban-banh-bao" data-entry>
+            <a class="photo-link" href="images/nhom-ban-banh-bao.jpg" aria-label="Xem toàn bộ ảnh nhóm bán bánh bao thịt nướng">
+              <img class="group-cover" src="images/nhom-ban-banh-bao.jpg" alt="Nhóm bạn ngồi hai bên quầy bán bánh bao thịt nướng ngoài trời vào buổi tối." width="1536" height="2048">
+            </a>
+            <h2>Bán bánh bao thịt nướng</h2>
+            <p>Tôi tham gia bán bánh bao thịt nướng cùng nhóm bạn, đảm nhận các khâu chuẩn bị, bán hàng và hỗ trợ dọn dẹp sau khi bán.</p>
+            <p>Công việc giúp tôi nhanh nhẹn, thân thiện hơn khi tiếp xúc với khách hàng. Tôi cũng rèn được khả năng làm việc nhóm và biết chủ động, linh hoạt khi phối hợp với các bạn.</p>
+          </article>
+        </div>
+        <section class="work-album" aria-labelledby="heading-album">
+          <h2 id="heading-album">Hình ảnh trong ca làm</h2>
+          <div class="album-photos">
+            <figure>
+              <a class="photo-link" href="images/ca-lam-tai-xuong.jpg" aria-label="Xem toàn bộ ảnh trong ca làm tại xưởng">
+                <img src="images/ca-lam-tai-xuong.jpg" alt="Vinh trong ca làm, áo dính bụi gỗ." width="1536" height="2048" loading="lazy">
+              </a>
+              <figcaption>Trong một ca làm tại xưởng gỗ</figcaption>
+            </figure>
+            <figure>
+              <a class="photo-link" href="images/hoan-thien-san-pham.jpg" aria-label="Xem toàn bộ ảnh nơi hoàn thiện sản phẩm">
+                <img src="images/hoan-thien-san-pham.jpg" alt="Vật liệu gỗ và dụng cụ được bày trên sàn ở nơi làm việc." width="1080" height="1920" loading="lazy">
+              </a>
+              <figcaption>Khi hoàn thiện sản phẩm</figcaption>
+            </figure>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="page" id="trang-chu" data-title="Trang chủ" aria-labelledby="heading-home" hidden>
+      <header class="banner"><h1 id="heading-home">Trần Công Vinh</h1></header>
+      <div class="container split-layout">
+        <img class="profile-photo" src="images/tran-cong-vinh.jpg" alt="Chân dung Trần Công Vinh đội mũ và đeo khăn choàng giữa khung cảnh đồi xanh." width="960" height="960" loading="lazy">
+        <div class="feature-copy">
+          <h2>Chào bạn, tôi là Vinh.</h2>
+          <p>Tôi đến từ Biên Hoà, Đồng Nai. Hiện tôi là sinh viên năm 2 ngành Dược học tại Đại học Lạc Hồng (LHU).</p>
+          <p>Ngoài thời gian học, tôi từng làm việc tại xưởng gỗ và tham gia bán bánh bao thịt nướng cùng nhóm bạn.</p>
+          <div class="profile-links">
+            <a class="button-link" href="#hoc-van">Xem học vấn</a>
+            <a class="button-link" href="#kinh-nghiem">Xem kinh nghiệm</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="gioi-thieu" data-title="Giới thiệu" aria-labelledby="heading-about" hidden>
+      <header class="banner"><h1 id="heading-about">Giới thiệu</h1></header>
+      <div class="container split-layout about-layout">
+        <img class="profile-photo" src="images/vinh-ngoai-troi.jpg" alt="Ảnh chân dung của Vinh bên hàng cây, phía xa là đồi núi." width="1440" height="1440" loading="lazy">
+        <div class="profile-details">
+          <section id="thong-tin-ca-nhan" data-entry>
+            <h2>Thông tin cá nhân</h2>
+            <dl class="facts">
+              <div><dt>Họ và tên</dt><dd>Trần Công Vinh</dd></div>
+              <div><dt>Ngày sinh</dt><dd><time datetime="2007-09-02">02/09/2007</time></dd></div>
+              <div><dt>Quê quán</dt><dd>Phú Yên</dd></div>
+              <div><dt>Đến từ</dt><dd>Biên Hoà, Đồng Nai</dd></div>
+              <div><dt>Hiện tại</dt><dd>Sinh viên năm 2 ngành Dược học tại Đại học Lạc Hồng (LHU)</dd></div>
+              <div><dt>Email</dt><dd><a href="mailto:vinhcongtran07@gmail.com">vinhcongtran07@gmail.com</a></dd></div>
+              <div><dt>Facebook</dt><dd><a href="https://www.facebook.com/vinh.tran.369580" target="_blank" rel="noopener noreferrer">facebook.com/vinh.tran.369580</a></dd></div>
+            </dl>
+          </section>
+          <section id="hoc-van" class="education" data-entry>
+            <h2>Học vấn</h2>
+            <ul>
+              <li><strong>Đã hoàn thành chương trình học Tiểu học, THCS, THPT với kết quả trung bình ở mức khá.</strong></li>
+              <li><strong>Hiện tại tôi đang học ngành Dược học tại Đại học Lạc Hồng.</strong></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="du-an" data-title="Dự án của tôi" aria-labelledby="heading-projects" hidden>
+      <header class="banner"><h1 id="heading-projects">Dự án của tôi</h1></header>
+      <article class="container split-layout" id="hoat-dong-nhom" data-entry>
+        <img class="project-photo" src="images/nhom-ban-banh-bao.jpg" alt="Ảnh cả nhóm bên quầy bánh bao thịt nướng." width="1536" height="2048" loading="lazy">
+        <div class="feature-copy">
+          <h2>Bán bánh bao thịt nướng cùng nhóm bạn</h2>
+          <p>Trong hoạt động này, phần việc của tôi trải dài từ lúc cả nhóm chuẩn bị đến khi dọn hàng cuối buổi.</p>
+          <ul class="task-list">
+            <li>Chuẩn bị quầy bán bánh cùng các bạn.</li>
+            <li>Trực tiếp bán bánh và giao tiếp với khách hàng.</li>
+            <li>Hỗ trợ cả nhóm thu dọn sau khi bán.</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section class="page" id="triet-ly-song" data-title="Triết lý sống" aria-labelledby="heading-philosophy" hidden>
+      <header class="banner"><h1 id="heading-philosophy">Triết lý sống</h1></header>
+      <div class="reading-column">
+        <h2>Chịu trách nhiệm với phần việc của mình</h2>
+        <p>Ở xưởng gỗ, tôi học tính kỷ luật khi cùng mọi người hoàn thiện sản phẩm. Khi bán bánh, tôi học cách chủ động phụ các bạn từ lúc chuẩn bị đến khi dọn hàng. Từ hai trải nghiệm ấy, tôi coi trọng việc làm trọn phần mình và sẵn sàng hỗ trợ người làm cùng.</p>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav container" aria-label="Điều hướng cuối trang">
+    <a href="#trang-chu">Trang chủ</a>
+    <a href="#gioi-thieu">Giới thiệu</a>
+    <a href="#du-an">Dự án của tôi</a>
+    <a href="#kinh-nghiem" aria-current="page">Kinh nghiệm</a>
+    <a href="#triet-ly-song">Triết lý sống</a>
+  </nav>
+
+  <footer class="contact">
+    <div class="container contact-inner">
+      <a class="qr-link" href="mailto:vinhcongtran07@gmail.com" aria-label="Gửi email cho Trần Công Vinh">
+        <img src="images/qr-lien-he.png" width="112" height="112" alt="Mã QR để soạn email cho Trần Công Vinh.">
+      </a>
+      <div>
+        <h2>Liên hệ với tôi</h2>
+        <address>
+          <a href="mailto:vinhcongtran07@gmail.com">vinhcongtran07@gmail.com</a>
+          <a href="https://www.facebook.com/vinh.tran.369580" target="_blank" rel="noopener noreferrer">Facebook của Vinh</a>
+        </address>
+      </div>
+      <span class="signature">Trần Công Vinh</span>
+    </div>
+  </footer>
+
+  <dialog id="search-dialog" aria-labelledby="search-title">
+    <div class="dialog-heading">
+      <h2 id="search-title">Tìm trong portfolio</h2>
+      <button class="icon-button close-button" id="close-search" type="button" aria-label="Đóng tìm kiếm">×</button>
+    </div>
+    <label for="search-input">Từ khóa</label>
+    <input id="search-input" type="search" placeholder="Ví dụ: xưởng gỗ, học vấn" autocomplete="off">
+    <p class="search-message" id="search-message" role="status"></p>
+    <ul id="search-results"></ul>
+  </dialog>
+</body>
+</html>
